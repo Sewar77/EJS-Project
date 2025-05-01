@@ -1,6 +1,6 @@
 <%- include("header.ejs") %>
-<div class="d-flex justify-content-between">
-  <div class="p-5 col-lg-8">
+<div class="d-flex justify-content-between flex-wrap">
+  <div class="p-5 col-lg-8 col-md-4 col-sm-12">
     <h4>
       Learn how a trip to Iceland changed my life and why I quit my job as a
       graphic designer to travel around the world
@@ -9,7 +9,7 @@
     <h1>Who is Adam Groffman?</h1>
     <img
       src="/images/adam-groffman.jpg"
-      class="rounded"
+      class="img-fluid img-thumbnail rounded"
       width="700px"
       height="400px"
       alt="adam-groffman"
@@ -65,10 +65,10 @@
     </p>
   </div>
   <div></div>
-  <div class="col-lg-4 container pt-5">
+  <div class="col-lg-4 col-md-4 col-sm-12 container pt-5">
     <h2>Messages:</h2>
     <br />
-    <div class="card border-danger mb-3" style="max-width: 18rem">
+    <div class="card border-danger mb-3">
       <div class="card-header">Sami Says:</div>
       <div class="card-body text-danger">
         <h5 class="card-title">Hi</h5>
@@ -77,7 +77,7 @@
     </div>
 
     <% if (messages.length > 0) { %> <% messages.forEach(message => { %>
-    <div class="card border-danger mb-3" style="max-width: 18rem">
+    <div class="card border-danger mb-3">
       <div class="card-header"><%= message.name %> Says:</div>
       <div class="card-body text-danger">
         <p class="card-text"><%= message.message %></p>
@@ -85,28 +85,28 @@
     </div>
     <% });} %>
 
-    <div class="card border-danger mb-3" style="max-width: 18rem">
+    <div class="card border-danger mb-3">
       <div class="card-header">Sami Says:</div>
       <div class="card-body text-danger">
         <h5 class="card-title">Hi</h5>
         <p class="card-text">What a good story!</p>
       </div>
     </div>
-    <div class="card border-danger mb-3" style="max-width: 18rem">
+    <div class="card border-danger mb-3">
       <div class="card-header">Sami Says:</div>
       <div class="card-body text-danger">
         <h5 class="card-title">Hi</h5>
         <p class="card-text">What a good story!</p>
       </div>
     </div>
-    <div class="card border-danger mb-3" style="max-width: 18rem">
+    <div class="card border-danger mb-3">
       <div class="card-header">Sami Says:</div>
       <div class="card-body text-danger">
         <h5 class="card-title">Hi</h5>
         <p class="card-text">What a good story!</p>
       </div>
     </div>
-    <div class="card border-danger mb-3" style="max-width: 18rem">
+    <div class="card border-danger mb-3">
       <div class="card-header">Sami Says:</div>
       <div class="card-body text-danger">
         <h5 class="card-title">Hi</h5>

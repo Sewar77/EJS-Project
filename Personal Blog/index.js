@@ -16,7 +16,7 @@ app.get("/home", (req, res) => {
 let messages = [];
 
 app.get("/about", (req, res) => {
-  res.render("about.ejs", {messages : messages});
+  res.render("about.ejs", { messages: messages });
 });
 
 app.get("/contact", (req, res) => {
@@ -28,8 +28,8 @@ app.post("/contact", (req, res) => {
     message: req.body["message"],
     name: req.body["name"],
   };
-messages.push(userMessage);
-res.redirect("/contact")
+  messages.push(userMessage);
+  res.redirect("/contact");
 });
 
 let posts = [];
