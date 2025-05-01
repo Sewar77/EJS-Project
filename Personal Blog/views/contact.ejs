@@ -3,21 +3,21 @@
 <h1 class="text-center p-3 m-3">leave a comment:</h1>
 
 <div class="container bg-danger-subtle">
-  <form class="row p-3 m-3 border rounded g-3" action="message">
+  <form class="row p-3 m-3 border rounded g-3" action="/contact" method="post">
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
       <input type="email" class="form-control" id="inputEmail4" />
     </div>
     <div class="col-md-6">
       <label for="name" class="form-label">Name</label>
-      <input type="password" class="form-control" id="name" name="name" />
+      <input type="text" class="form-control" id="name" name="name" />
     </div>
     <div class="col-12">
-      <label for="Message" class="form-label">Message</label>
+      <label for="message" class="form-label">Message</label>
       <textarea
         class="form-control"
-        id="Message"
-        name="Message"
+        id="message"
+        name="message"
         placeholder="Leave a comment"
       >
       </textarea>
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Comment</button>
+      <button type="submit" class="btn btn-danger">Comment</button>
     </div>
   </form>
 </div>

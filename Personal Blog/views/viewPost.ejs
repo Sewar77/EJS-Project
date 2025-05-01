@@ -1,0 +1,28 @@
+<%- include("header.ejs") %>
+
+<div class="container mt-4">
+  <h1 class="text-center mb-4">Blog Posts</h1>
+  
+  <div class="text-center mb-4">
+    <a href="/createPost" class="btn btn-danger">
+      Create New Post
+    </a>
+  </div>
+
+  <% if (posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+      <div class="card mb-4 shadow">
+        <div class="card-body">
+          <h3 class="card-title"><%= post.title %></h3>
+          <p class="card-text"><%= post.content %></p>
+        </div>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <div class="alert alert-danger text-center bg-danger-subtle">
+      No posts yet. Why not create one?
+    </div>
+  <% } %>
+</div>
+
+<%- include("footer.ejs") %>
