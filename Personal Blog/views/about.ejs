@@ -64,11 +64,10 @@
       and leave Boston without answering a single one of those questions.
     </p>
   </div>
-  <div>
-    
-  </div>
+  <div></div>
   <div class="col-lg-4 container pt-5">
-    <h2>Messages:</h2><br>
+    <h2>Messages:</h2>
+    <br />
     <div class="card border-danger mb-3" style="max-width: 18rem">
       <div class="card-header">Sami Says:</div>
       <div class="card-body text-danger">
@@ -76,6 +75,16 @@
         <p class="card-text">What a good story!</p>
       </div>
     </div>
+
+    <% if (messages.length > 0) { %> <% messages.forEach(message => { %>
+    <div class="card border-danger mb-3" style="max-width: 18rem">
+      <div class="card-header"><%= message.name %> Says:</div>
+      <div class="card-body text-danger">
+        <p class="card-text"><%= message.message %></p>
+      </div>
+    </div>
+    <% });} %>
+
     <div class="card border-danger mb-3" style="max-width: 18rem">
       <div class="card-header">Sami Says:</div>
       <div class="card-body text-danger">
