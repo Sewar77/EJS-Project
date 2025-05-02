@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <% if (messages.length > 0) { %> <% messages.forEach(message => { %>
+    <% if (locals.messages.length > 0) { %> <% messages.forEach(message => { %>
     <div class="card border-danger mb-3">
       <div class="card-header"><%= message.name %> Says:</div>
       <div class="card-body text-danger">

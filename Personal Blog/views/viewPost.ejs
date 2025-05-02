@@ -7,7 +7,7 @@
     <a href="/createPost" class="btn btn-danger"> Create New Post </a>
   </div>
 
-  <% if (posts.length > 0) { %> <% posts.forEach(post => { %>
+  <% if (locals.posts.length > 0) { %> <% posts.forEach(post => { %>
   <div class="card mb-4 shadow">
     <div class="card-body">
       <h3 class="card-title"><%= post.title %></h3>

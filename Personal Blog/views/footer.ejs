@@ -2,21 +2,23 @@
 </main>
 <footer class="footer mt-auto py-3 bg-danger-subtle">
   <div class="container">
-    <form class="d-flex align-items-center" role="search">
-      <div class="input-group">
+    <form class="d-flex flex-column flex-md-row align-items-center gap-3" role="search">
+      <div class="input-group flex-grow-1">
         <input 
           class="form-control rounded-start-pill border-end-0" 
           type="search" 
           placeholder="Search posts..." 
-          aria-label="Search">
+          aria-label="Search"
+          required>
         <button 
           class="btn btn-outline-danger rounded-end-pill border-start-0" 
           type="submit">
-          <i class="bi bi-search"></i> Search
+          <i class="bi bi-search"></i> 
+          <span class="d-none d-sm-inline">Search</span>
         </button>
       </div>
     </form>
-    <div class="text-center mt-2 text-muted small">
+        <div class="text-center mt-3 mt-md-2 text-muted small">
       © 2024 Travel Blog. All rights reserved.
     </div>
   </div>
