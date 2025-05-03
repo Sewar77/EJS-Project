@@ -38,12 +38,40 @@ app.get("/viewPost", (req, res) => {
   res.render("viewPost.ejs", { posts: posts });
 });
 
+app.get("/updatePost/:index", (req, res) => {
+  const index = req.params.index;
+  const post = posts[index];
+  if (!post) {
+    return res.redirect("/viewPost");
+  }
+  res.render("updatePost.ejs", { post, index });
+});
+
+app.post("/updatePost/:index", (req, res) => {
+  const index = req.params.index;
+  posts[index] = {
+    title: req.body["title"],
+    nameAuthr: req.body["nameAuthr"],
+    content: req.body["content"],
+  };
+  res.redirect("/viewPost");
+});
+
+app.get("/delete/:index", (req, res) => {
+  const index = req.params.index;
+  if (posts[index]) {
+    posts.splice(index, 1);
+  }
+  res.redirect("/viewPost");
+});
 app.get("/createPost", (req, res) => {
   res.render("createPost.ejs");
 });
+
 app.post("/createPost", (req, res) => {
   const newPost = {
     title: req.body["title"],
+    nameAuthr: req.body["nameAuthr"],
     content: req.body["content"],
   };
   posts.push(newPost);
