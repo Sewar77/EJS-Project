@@ -1,0 +1,118 @@
+<%- include("partials/header.ejs") %>
+<div class="d-flex justify-content-between flex-wrap">
+  <div class="p-5 col-lg-8 col-md-4 col-sm-12">
+    <h4>
+      Learn how a trip to Iceland changed my life and why I quit my job as a
+      graphic designer to travel around the world
+    </h4>
+    <br />
+    <h1>What is Travel Blog?</h1>
+    <img
+      src="/images/spirit.jpeg"
+      class="img-fluid img-thumbnail rounded"
+      width="700px"
+      height="400px"
+      alt="adam-groffman"
+    />
+    <br />
+    <br />
+    <br />
+    <p>
+      In a few words, I’m a hipster travel blogger & one-time graphic designer.
+      <br /><br />
+      In 2010 I quit my job as a book designer in Boston, MA and set off on a
+      trip around the world.
+      <br /><br />
+      Over the course of 15 months I visited more than a handful of countries
+      from Morocco to Israel, India to Vietnam. <br /><br />
+      (Read my reasons for wanting to travel around the world) Why did I set off
+      on my trip around the world? Well, it all started with a short weekend
+      trip to Reykjavik, Iceland in 2009…
+    </p>
+    <p>
+      In September 2009, I visited Reykjavik, Iceland with a good friend. We
+      were only there for a 3-day weekend, but during that time, we met so many
+      interesting people and fellow travelers that it inspired me to make up my
+      own life plan.
+      <br /><br />
+
+      I’ve been lucky enough to travel and study abroad throughout my life, and
+      I see no reason why that should end with a full-time 9-5 job. I started
+      working two weeks before I had even graduated from university. Without any
+      transition period between school and “real-life,” I spent most of my early
+      20s busy making a career and being responsible.
+      <br /><br />
+
+      It wasn’t until I met people my same age from all over the world (doing
+      very different things than what I was doing) that I was inspired to take
+      some action. It just seemed unfair to think they had all these amazing
+      stories to tell, and here I was, beginning to feel more and more
+      complacent in my generally comfortable life.
+      <br /><br />
+      It was on my IcelandAir flight back from Reykjavik to Boston that I
+      realized there’s no reason to stop traveling. I could make something work
+      somehow whether through my job or on my own. In seat 19F, I wrote up a
+      list of questions: Could I travel & not work? Where would I go? How much
+      would it cost? Would I be able to live like that? What would I learn/do?
+      When would I go?
+      <br /><br />
+
+      I didn’t have all the answers (actually, I had none at that moment), but I
+      knew they were questions I would be able to answer.
+      <br /><br />
+      Honestly, I’m surprised at how easy it was to make the decision to pick up
+      and leave Boston without answering a single one of those questions.
+    </p>
+  </div>
+  <div></div>
+  <div class="col-lg-4 col-md-4 col-sm-12 container pt-5">
+    <h2>Messages:</h2>
+    <br />
+    <div class="card border-danger mb-3">
+      <div class="card-header">Sami Says:</div>
+      <div class="card-body text-danger">
+        <h5 class="card-title">Hi</h5>
+        <p class="card-text">What a good story!</p>
+      </div>
+    </div>
+
+    <% if (locals.messages.length > 0) { %> <% messages.forEach(message => { %>
+    <div class="card border-danger mb-3">
+      <div class="card-header"><%= message.name %> Says:</div>
+      <div class="card-body text-danger">
+        <p class="card-text"><%= message.message %></p>
+      </div>
+    </div>
+    <% });} %>
+
+    <div class="card border-danger mb-3">
+      <div class="card-header">Sami Says:</div>
+      <div class="card-body text-danger">
+        <h5 class="card-title">Hi</h5>
+        <p class="card-text">What a good story!</p>
+      </div>
+    </div>
+    <div class="card border-danger mb-3">
+      <div class="card-header">Sami Says:</div>
+      <div class="card-body text-danger">
+        <h5 class="card-title">Hi</h5>
+        <p class="card-text">What a good story!</p>
+      </div>
+    </div>
+    <div class="card border-danger mb-3">
+      <div class="card-header">Sami Says:</div>
+      <div class="card-body text-danger">
+        <h5 class="card-title">Hi</h5>
+        <p class="card-text">What a good story!</p>
+      </div>
+    </div>
+    <div class="card border-danger mb-3">
+      <div class="card-header">Sami Says:</div>
+      <div class="card-body text-danger">
+        <h5 class="card-title">Hi</h5>
+        <p class="card-text">What a good story!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("partials/footer.ejs") %>
