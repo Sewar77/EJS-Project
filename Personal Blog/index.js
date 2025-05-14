@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/home", (req, res) => {
-  res.render("home.ejs");
+  res.render("home.ejs"); 
 });
 
 let messages = [];

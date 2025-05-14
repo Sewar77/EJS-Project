@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container mt-4">
+  <h1 class="text-center mb-4">Blog Posts</h1>
+  <div class="text-center mb-4">
+    <a href="/createPost" class="btn btn-danger"> Create New Post </a>
+  </div>
+  <div class="card mb-4 shadow">
+    <div class="card-body">
+      <h3 class="card-title">This is the best Travel</h3>
+      <h6 class="card-title">Written By: Samia</h6>
+      <p class="card-text">
+        I have travelled many times but Italy was the best one. I like it
+      </p>
+    </div>
+  </div>
+  <div class="card mb-4 shadow">
+    <div class="card-body">
+      <h3 class="card-title">This is My Second Travel</h3>
+      <h6 class="card-title">Written By: Smeer</h6>
+      <p class="card-text">
+        I have travelled many times but Italy was the best one. I like it
+      </p>
+    </div>
+  </div>
+ <% if (locals.posts && posts.length > 0) { %>
+  <% posts.forEach((post, index) => { %>
+    <div class="card mb-4 shadow">
+      <div class="card-body">
+        <h3 class="card-title"><%= post.title %></h3>
+        <h6 class="card-title">By: <%= post.nameAuthr %></h6>
+        <p class="card-text"><%= post.content %></p>
+        <div class="mt-3">
+          <a href="/updatePost/<%= index %>" class="btn btn-success">Update</a>
+          <a href="/delete/<%= index %>" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+  <% }); %>
+<% }  %>
+</div>
+
+<%- include("partials/footer.ejs") %>
