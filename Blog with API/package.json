@@ -8,10 +8,13 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "", 
-   "dependencies": {
+  "description": "",
+  "dependencies": {
+    "axios": "^1.9.0",
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "method-override": "^3.0.0",
+    "pg": "^8.15.6"
   }
 }
